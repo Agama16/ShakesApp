@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+    <link href="../styles/menu.css" rel="stylesheet">
+    <link href="../navbarAndFooter/footer.css" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+
+.card-enlarged {
+  transform: scale(1.05);
+}
+
+    </style>
+
+    <script>
+        $(document).ready(function() {
+  $('.card').mouseenter(function() {
+    $(this).addClass('card-enlarged');
+  });
+  $('.card').mouseleave(function() {
+    $(this).removeClass('card-enlarged');
+  });
+});
+    </script>
+
+
+
+</head>
+<body>
+    <!--this is going to be the navbar ----------------------------------------------------->
+
+    <script src="../navbarAndFooter/CustomerNavBar.js"></script>
+
+      <!--end of the navbar ---------------------------------------------->
+
+
+   <br>
+
+    <h1>
+       Our Products:
+    </h1> <br><br>
+   
+    <ul>
+        <div class="container">
+            <div class="card-grid">
+                <% for (p of products) { %>
+                <div class="card"  >
+                    <h5>price: <%= p.price %> </h5>
+                    <h5>foodType: <%= p.foodType %> </h5>
+                    <h5>name: <%= p.name %> </h5>
+                    <h5>points: <%= p.points %> </h5>
+                    <h5>product id: <%= p.id %> </h5>
+                   
+                        <a class="btn btn-primary" href="/cart/addToCart/<%=p.id%>">add to cart</a>
+                        <a class="btn btn-primary" href="/menu/addToFav/<%=p.id%>">Add to Favorite Products</a>
+                   
+                </div>
+            <% } %>
+
+      </div>
+    </div>
+            <br>
+            <br>
+    </ul>
+
+    <script src="../menu/video.js"></script>
+    <br><br><br>
+    <script src="../navbarAndFooter/include_footer.js"> </script>
+
+</body>
+</html>

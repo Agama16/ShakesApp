@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>
+        CUSTOMER
+    </h1>
+    <ul>
+        <% for (c of customers) { %>
+
+            <h5>firstName: <%= c.firstName %> </h5>
+            <h5>lastName: <%= c.lastName %> </h5>
+            <h5>adress: <%= c.adress %> </h5>
+            <h5>gmail: <%= c.gmail %> </h5>
+            <h5>password: <%= c.password %> </h5>
+            <h5>userId: <%= c.userId %> </h5>
+            <h5>birthDay: <%= c.birthDay %> </h5>
+
+        <% } %>
+    </ul>
+</body>
+</html>

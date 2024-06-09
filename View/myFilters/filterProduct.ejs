@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+
+    <style>
+        
+        .button-container {
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            .form-container {
+                 text-align: center;
+             }
+             body{
+                background-color: aliceblue;
+             }
+
+    </style>
+
+</head>
+<body>
+
+    <script src="../navbarAndFooter/CustomerNavBar.js"></script>
+
+    <h1> 
+        FILTER PRODUCT
+    </h1>
+
+    <div class="form-container">
+        <form method="post">
+            <input type="text" placeholder="price" name="price">
+            <input type="text" placeholder="foodType" name="foodType">
+            <input type="text" placeholder="points" name="points">
+
+
+            <br><br><br>
+            <div class="button-container">
+                <button style="font-size: medium;" class="btn btn-dark" type="submit"> submit</button> 
+            </div>
+
+            <!-- <a href="/menu/">back to menu</a> -->
+
+        </form>
+    </div>
+    
+</body>
+</html>

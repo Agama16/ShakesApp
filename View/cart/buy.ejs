@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+    <style>
+        
+  
+        body{
+            background-color:ivory;
+        }
+
+    
+    .card {
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.096);
+    padding: 20px;
+    }
+    
+    .btn {
+    margin-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+
+    
+    .card {
+    padding: 10px;
+    }
+    
+    .btn {
+    margin-top: 20px;
+    }
+    }
+  
+     .button-container {
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    h5{
+        color: rgb(85, 113, 123);
+        font-size: 20px;
+    }
+    a{
+        font-size: medium;
+        text-decoration: none;
+    }
+    
+    ul{
+        margin-left: 40px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <script src="../navbarAndFooter/CustomerNavBar.js"></script>
+    <br>
+    <h1 style="text-align: center;">
+        Total Payment
+    </h1><br>
+    
+    <div style="text-align: center;">
+        <a class="btn btn-dark" href="/menu/">back to menu</a> 
+    </div>
+
+        <br><br>
+        <div class="card" style="width: 90%;">
+            <div class="card-body" >
+                <p>Total Price: <%= total %></p>
+            </div>
+        </div>
+            
+
+</body>
+</html> 

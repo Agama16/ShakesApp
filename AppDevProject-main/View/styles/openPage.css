@@ -1,0 +1,221 @@
+body{
+  overflow-x: hidden;
+}
+
+/*when the screen is larger - order -----------------------------------------------------------*/
+
+
+.order{
+  height: 300px;
+  background-color: lightblue;
+  color:lightblue;
+}
+
+.BuildYourOwn{
+  height: 300px;
+  margin-top: 30px;
+  background-color: rgb(217, 255, 217);
+  color:rgb(217, 255, 217);
+}
+
+
+.frontPage{
+  margin-left:450px;
+  margin-top: 70px;
+ 
+}
+.order-img{
+  margin-left: 30px;
+   margin-top: 25px; 
+   width: 350px; 
+   height: 250px;
+   border-radius: 1rem;
+}
+
+.order-text{
+  color: black; 
+  margin-left:410px;
+   margin-top: -280px; 
+   font-size: large;
+}
+
+.build-your-own-img{
+  margin-left: 30px;
+   margin-top: 20px; 
+   width: 350px; 
+   height: 250px;
+   border-radius: 1rem;
+}
+
+.build-your-own-text{
+  color: black; 
+  margin-left:410px;
+   margin-top: -260px; 
+   font-size: large;
+}
+
+/*when the screen gets smaller -----------------------------------------------------------*/
+
+@media(max-width:788px){
+
+  .order {
+    background-color: lightblue;
+    color: rgb(81, 80, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    transition: 0.3s;
+    padding-bottom: 70px; 
+    padding-top: 40px;
+  }
+  
+  .order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .order-img {
+    width: 360px;
+    height: 240px;
+    border-radius: 1rem;
+    transition: 1s;
+    margin-bottom: -30px;
+  }
+  
+  .order-text {
+    margin: 0 20px;
+    font-size: medium;
+  }
+  
+  
+  
+  .BuildYourOwn {
+    background-color: rgb(217, 255, 217);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    transition: 0.3s;
+    padding-bottom: 90px;
+    padding-top: 85px;
+  }
+  
+  .build-your-own-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .build-your-own-img {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 10px;
+
+  }
+  
+  .build-your-own-text {
+    margin: 0 80px;
+    font-size: medium;
+  }
+  
+
+}
+
+
+
+/*this is the name of the company at the top center -------------------------------------------- */
+.bg-primary{
+  background-color: rgb(255, 191, 222);
+  color: rgb(81, 84, 83);
+  height: 110px;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-xl{
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 600;
+  margin-bottom: 20px;
+
+}
+
+@media(max-width:960px){
+  .text-xl{
+    font-size: 30px;
+  }
+}
+
+
+@font-face {
+  font-family: "main-font";
+  src: url(../styles/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+/*this is the 5 top best sellers shakes*/
+
+.five-Top{
+
+  margin-left: 100px;
+  margin-top: 20px;
+  font-family:main-font;
+  font-weight: bolder;
+  font-size: large;
+  letter-spacing: 2px;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin-right: 0;
+  padding: 0;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 24rem);
+  justify-content: center; /* horizontally center the grid items */
+  align-items: center; /* vertically center the grid items */
+  transition: 1s;
+}
+
+.container {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: transparent;
+  margin-left: 60px;
+  margin-right: 90px;
+}
+.image{
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  margin: 20px;
+  cursor: pointer;
+
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  margin-right: 50px;
+}
+
+
+/*fixes for the nav bar smaller menu*/
+
+.smaller-menu div a{
+  font-weight: 600;
+}
+
+.smaller-menu ul{
+  font-weight: 600;
+}

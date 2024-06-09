@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+
+
+    <style>
+
+        /*the changes for the navbar----------------*/
+        .navbar{
+        background-color: rgb(80, 91, 122);
+        }
+        .navbar.a:hover{
+            color: aliceblue;
+        }
+        .smaller-menu a:hover{
+            color:aliceblue;
+        }
+        .smaller-menu{
+            background-color: rgb(80, 91, 122);
+        }
+        .navbar a:hover{
+             color: aliceblue;
+        }
+
+
+        body 
+        { 
+            background-color: rgb(41, 47, 63);
+            padding: 1rem; 
+        }
+        form {
+            display: block;
+            margin-bottom: 10px;
+            
+        }
+
+        .form-container {
+             text-align: center;
+         }
+
+         input{
+            background-color: rgb(202, 203, 204);
+            color: rgb(87, 87, 88);
+         }
+
+         .button-container {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        h5{
+            color: rgb(212, 215, 219);
+            font-size: 20px;
+        }
+        a{
+            font-size: medium;
+            text-decoration: none;
+        }
+
+        ul{
+            margin-left: 40px;
+        }
+
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        }
+
+        .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 20px;
+        }
+
+        .card {
+        margin: 0;
+        border-radius: 5px;
+        box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        }
+
+        .btn {
+        margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+        .card-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 10px;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+        }
+
+    </style>
+</head>
+<body>
+
+    <script src="../navbarAndFooter/AdminNavBar.js"></script>
+
+    <h1 style="color: aliceblue">
+        FILTERED WORKERS
+    </h1>
+
+        <button
+        style="    position: absolute;
+        top: 230px;
+        left: 50%;
+        transform: translateX(-50%);"
+         class="btn btn-outline-light"><a style="color: aliceblue" href="/homePageAdmin/admin">back to home page</a></button>
+
+         <br><br><br><br>
+    <div class="container">
+        <div class="card-grid">
+          <% for (w of workers) { %>
+            <div class="card">
+              <h5>user Id: <%= w.userId %> </h5>
+              <h5>first Name: <%= w.firstName %> </h5>
+              <h5>sure Name: <%= w.sureName %> </h5>
+              <h5>phone: <%= w.phone %> </h5>
+              <h5>salary: <%= w.salary %> </h5>
+              <h5>rank: <%= w.rank %> </h5>
+              <h5>branch id: <%= w.branchId %> </h5>
+              <button class="btn" style="background-color: rgb(168, 214, 255); height: 40px;"><a href="/workers/deleteOneWorker/<%= w.userId%>">delete worker</a></button>
+            </div>
+          <% } %>
+        </div>
+      </div>
+</body>
+</html>
+
+<!-- id:id,
+    firstName:firstname,
+    sureName:surename,
+    phone:phone,
+    salary:salary,
+    rank:rank, 
+    branchId:branchId,
+    joiningDate: joiningdste,
+    birthday:birthday  -->

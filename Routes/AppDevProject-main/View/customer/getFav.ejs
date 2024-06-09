@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+    <style>
+        
+        .button-container {
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            .form-container {
+                 text-align: center;
+             }
+             body{
+                background-color:linen;
+                
+             }
+             a{
+                font-weight: 600;
+                font-size: medium;
+                text-decoration: none;
+             }
+    </style>
+
+</head>
+<body>
+
+    <script src="../navbarAndFooter/CustomerNavBar.js"></script>
+
+    <h1>
+        CUSTOMER FAVORITE
+    </h1>
+
+    <ul>
+<br><br><br>
+        <div class="button-container">
+            <button class="btn btn-light"><a href="/menu/deleteAllFav">delete all</a></button>
+            <button class="btn btn-light"><a href="/menu/">back to menu</a></button>
+        </div>
+
+        <% for (f of fav) { %>
+
+            <h5>product id: <%= f %> </h5>
+
+            <a href="/menu/deleteOneFav/<%=f%>">delete product from favorite products</a>
+
+        <% } %>
+    </ul>
+</body>
+</html>

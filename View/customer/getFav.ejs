@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/menu.css" rel="stylesheet">
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+
+.card-enlarged {
+  transform: scale(1.05);
+}
+
+    </style>
+
+    <script>
+        $(document).ready(function() {
+        $('.card').mouseenter(function() {
+            $(this).addClass('card-enlarged');
+        });
+        $('.card').mouseleave(function() {
+            $(this).removeClass('card-enlarged');
+        });
+        });
+    </script>
+    
+    <style>
+        
+        .button-container {
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            h5{
+                color: darkolivegreen;
+            }
+            h1{
+                color: darkolivegreen;
+            } 
+            .form-container {
+                 text-align: center;
+             }
+             body{
+                background-color:linen;
+                
+             }
+             a{
+                font-weight: 600;
+                font-size: medium;
+                text-decoration: none;
+             }
+    </style>
+
+</head>
+<body>
+
+    <script src="../navbarAndFooter/CustomerNavBar.js"></script>
+
+    <br>
+    <h1 style="text-align: center;">
+        CUSTOMER FAVORITE
+    </h1>
+
+    <ul>
+<br>
+        <div style="margin-right: 50px;" class="button-container">
+            <button class="btn btn-dark"><a style="color: aliceblue;" href="/menu/deleteAllFav">delete all</a></button>
+            <button class="btn btn-light"><a href="/menu/">back to menu</a></button>
+        </div>
+
+        <br><br>
+        <div class="container">
+            <div class="card-grid">
+                <% for (f of fav) { %>
+                    <div class="card" >
+                        <h5>product id: <%= f %> </h5>
+
+                        <a class="btn btn-outline-dark" href="/menu/deleteOneFav/<%=f%>">delete product from favorite products</a>            
+                    </div>
+                <% } %>
+            </div>
+        </div>
+
+        
+        
+    </ul>
+</body>
+</html>

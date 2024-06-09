@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+        <link href="../styles/menu.css" rel="stylesheet">
+
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+
+
+    <style>
+        /*the changes for the navbar----------------*/
+        .navbar{
+        background-color: rgb(80, 91, 122);
+        }
+        .navbar.a:hover{
+            color: aliceblue;
+        }
+        .smaller-menu a:hover{
+            color:aliceblue;
+        }
+        .smaller-menu{
+            background-color: rgb(80, 91, 122);
+        }
+        .navbar a:hover{
+             color: aliceblue;
+        }
+        /*-------------------------------------*/
+        body 
+        { 
+            background-color: rgb(41, 47, 63);
+            padding: 1rem; 
+        }
+        form {
+            display: block;
+            margin-bottom: 10px;
+            
+        }
+
+        .form-container {
+             text-align: center;
+         }
+
+         input{
+            background-color: rgb(202, 203, 204);
+            color: rgb(87, 87, 88);
+         }
+
+         .button-container {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        h5{
+            color: rgb(212, 215, 219);
+            font-size: 20px;
+        }
+        a{
+            font-size: medium;
+            text-decoration: none;
+        }
+
+        ul{
+            margin-left: 40px;
+        }
+        .card-grid {
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-gap: 0px;
+    }
+
+        
+</style>
+
+</head>
+<body>
+
+    <script src="../navbarAndFooter/AdminNavBar.js"></script>
+
+
+
+    <h1 style="color: aliceblue;">
+        WORKERS
+    </h1>
+    <ul >
+        <div class="container">
+            <div class="card-grid">
+                <% for (w of workers) { %>
+                    <div class="card">
+                    <h5>user Id: <%= w.userId %> </h5>
+                    <h5>first Name: <%= w.firstName %> </h5>
+                    <h5>sure Name: <%= w.sureName %> </h5>
+                    <h5>phone: <%= w.phone %> </h5>
+                    <h5>salary: <%= w.salary %> </h5>
+                    <h5>rank: <%= w.rank %> </h5>
+                    <h5>branch id: <%= w.branchId %> </h5>
+                    <br>
+                    <button class="btn" style="background-color: rgb(168, 214, 255); height: 40px; "><a href="/workers/deleteOneWorker/<%= w.userId%>">Delete worker</a></button>
+              <br><br>
+            </div>
+        <% } %>
+        </div>
+        </div>
+        <button class="btn" style="background-color: rgb(168, 214, 255); height: 40px; "><a style="text-decoration: none; font-size: medium;" href="/homePageAdmin/admin">back to home page</a></button>
+
+    </ul>
+
+    <script src="../homePage/javascripts/main-menu.js"></script>
+    
+    
+   </body>
+</html>
+
+

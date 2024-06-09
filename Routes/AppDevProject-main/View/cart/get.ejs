@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            justify-content: center;
+        }
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            margin: 1rem;
+            padding: 1rem;
+            width: calc(33.33% - 2rem);
+            text-align: center;
+        }
+        li:hover {
+            background-color: #f9f9f9;
+        }
+        a {
+            display: block;
+            margin-top: 1rem;
+            text-align: center;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            max-width: 10rem;
+        }
+        a:hover {
+            background-color: #3e8e41;
+        }
+        input[type="text"] {
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 20rem;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+
+
+        .delete {
+            color: red;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>
+        CUSTOMER CART
+    </h1>
+    <ul>
+        <a href="/cart/deleteAllCart"> delete all </a>
+        <a href="/menu/">back to menu</a>
+
+        <% for (i of items) { %>
+
+            <h5>item Id: <%= i %> </h5>
+            <a href="/cart/deleteOneItem/<%=i%>" > delete this product</a>
+
+        <% } %>
+        <a href="/cart/buy"> buy </a>
+    </ul>
+</body>
+</html> 
+

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "main-font";
+  src: url(../styles/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+body{
+ font-family: main-font; 
+}
+
+  
+.container{
+margin-top: 40px;
+font-family: main-font;
+font-size: small;
+text-align: center;
+
+}
+.container button{
+  font-size: larger;
+  border-radius: 40px;
+  font-family: main-font;
+  background-color: rgb(251, 200, 200);
+  
+}
+.container input{
+  font-size: x-large;
+}
+
+.fields{
+  font-family: main-font;
+  font-weight: 550;
+}
+
+/*fixes for the nav bar smaller menu*/
+
+.smaller-menu div a{
+  font-weight: 600;
+}
+
+.smaller-menu ul{
+  font-weight: 600;
+}
+body{background-image: linear-gradient(to bottom right,rgb(185, 234, 250),rgb(253, 225, 255));
+background-size: cover;}

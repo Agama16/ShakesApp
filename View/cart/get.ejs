@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+    <link href="../styles/menu.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+
+.card-enlarged {
+  transform: scale(1.05);
+}
+
+    </style>
+
+    <script>
+        $(document).ready(function() {
+        $('.card').mouseenter(function() {
+            $(this).addClass('card-enlarged');
+        });
+        $('.card').mouseleave(function() {
+            $(this).removeClass('card-enlarged');
+        });
+        });
+    </script>
+
+    <style>
+        
+        body{
+            background-color: honeydew;
+        }
+    
+    h5{
+        color: rgb(85, 113, 123);
+        font-size: 20px;
+    }
+
+    
+        
+    </style>
+</head>
+<body>
+
+    <script src="../navbarAndFooter/CustomerNavBar.js"></script>
+    <br>
+    <h1 style="text-align: center;">
+        CUSTOMER CART
+    </h1>
+    <br>
+
+
+        <div style="text-align: center; margin-right: -5px;">
+            <a class="btn btn-dark" href="/cart/deleteAllCart">delete all</a> 
+            <a class="btn btn-dark" href="/menu/">back to menu</a> 
+        </div>
+
+        <br>
+        <div class="container" >
+            <div class="card-grid">
+                <% for (i of items) { %>
+
+            
+                    <div class="card">
+
+                            <h5>item Id: <%= i %> </h5> <br>
+                            <a style="color: rgb(209, 144, 106);" href="/cart/deleteOneItem/<%=i%>" > delete this product</a>
+                            <br>
+                    </div>
+                    
+                    <% } %>
+                    
+                </div>
+            </div>
+            <br><br>
+            <a style="margin-left: 20px;" class="btn btn-dark" href="/cart/buy">Buy</a> <br>
+        
+<br><br>
+    
+
+
+</body>
+</html> 

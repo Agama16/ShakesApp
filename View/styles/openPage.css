@@ -1,0 +1,261 @@
+body{
+  overflow-x: hidden;
+}
+
+/*when the screen is larger - order -----------------------------------------------------------*/
+
+
+.order{
+  height: 300px;
+
+}
+
+.get2know{
+  height: 300px;
+  margin-top: 30px;
+
+}
+
+
+.frontPage{
+  margin-left:450px;
+  margin-top: 70px;
+ 
+}
+.order-img{
+  margin-left: 30px;
+   margin-top: 25px; 
+   width: 350px; 
+   height: 250px;
+   border-radius: 1rem;
+}
+
+.order-text{
+  color: black; 
+  margin-left:410px;
+   margin-top: -280px; 
+   font-size: large;
+}
+
+.get-2-know-img{
+  margin-left: 30px;
+   margin-top: 20px; 
+   width: 350px; 
+   height: 250px;
+   border-radius: 1rem;
+}
+
+.get-2-know-text{
+  color: black; 
+  margin-left:410px;
+   margin-top: -260px; 
+   font-size: large;
+}
+
+/*when the screen gets smaller -----------------------------------------------------------*/
+
+@media(max-width:788px){
+
+  .order {
+    color: rgb(81, 80, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    transition: 0.3s;
+    padding-bottom: 70px; 
+    padding-top: 40px;
+  }
+  
+  .order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .order-img {
+    width: 360px;
+    height: 240px;
+    border-radius: 1rem;
+    transition: 1s;
+    margin-bottom: -30px;
+  }
+  
+  .order-text {
+    margin: 0 20px;
+    font-size: medium;
+  }
+  
+  
+  
+  .get2know {
+
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    transition: 0.3s;
+    padding-bottom: 90px;
+    padding-top: 85px;
+  }
+  
+  .get-2-know-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .get-2-know-img {
+    width: 250px;
+    height: 150px;
+    margin-bottom: 10px;
+
+  }
+  
+  .get-2-know-text {
+    margin: 0 80px;
+    font-size: medium;
+    float: right;
+  }
+ 
+
+}
+
+
+
+/*this is the name of the company at the top center -------------------------------------------- */
+.bg-primary{
+
+  color: rgb(81, 84, 83);
+  height: 110px;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-xl{
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 600;
+  margin-bottom: 20px;
+
+}
+
+@media(max-width:960px){
+  .text-xl{
+    font-size: 30px;
+  }
+}
+
+
+@font-face {
+  font-family: "main-font";
+  src: url(../styles/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+/*this is the 5 top best sellers shakes*/
+
+.five-Top{
+
+  margin-left: 100px;
+  margin-top: 20px;
+  font-family:main-font;
+  font-weight: bolder;
+  font-size: large;
+  letter-spacing: 2px;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin-right: 0;
+  padding: 0;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 24rem);
+  justify-content: center; /* horizontally center the grid items */
+  align-items: center; /* vertically center the grid items */
+  transition: 1s;
+}
+
+.container {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: transparent;
+  margin-left: 60px;
+  margin-right: 90px;
+}
+.image{
+  width: 150px;
+  height: 150px;
+  border-radius: 1rem;
+  margin: 20px;
+  cursor: pointer;
+
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+  margin-right: 50px;
+}
+
+
+/*fixes for the nav bar smaller menu*/
+
+.smaller-menu div a{
+  font-weight: 600;
+}
+
+.smaller-menu ul{
+  font-weight: 600;
+}
+
+
+
+
+/*background video of the screen*/
+
+
+#myVideo {
+  right: -50px; /* subtracting 20px from the right side */
+  left: -23px;
+  top: 0;
+  bottom: 0;
+  min-width: 110%;
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: left;
+  box-shadow: inset 5px 0 5px -5px #000000;
+ font-size: medium;
+}
+
+/*changes for the navbar to make it transpernt*/
+
+
+.navbar{
+  background-color: transparent !important;
+}
+
+
+.smaller-menu{
+  background-color: rgb(236, 255, 251) !important;
+}
+
+

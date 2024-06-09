@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+
+    <style>
+            /*the changes for the navbar----------------*/
+            .navbar{
+            background-color: rgb(80, 91, 122);
+            }
+            .navbar.a:hover{
+                color: aliceblue;
+            }
+            .smaller-menu a:hover{
+                color:aliceblue;
+            }
+            .smaller-menu{
+                background-color: rgb(80, 91, 122);
+            }
+            .navbar a:hover{
+                 color: aliceblue;
+            }
+            /*-------------------------------------*/
+            body 
+            { 
+                background-color: rgb(41, 47, 63);
+                padding: 1rem; 
+            }
+            form {
+                display: block;
+                margin-bottom: 10px;
+                
+            }
+
+            .form-container {
+                 text-align: center;
+             }
+
+             input{
+                background-color: rgb(202, 203, 204);
+                color: rgb(87, 87, 88);
+             }
+
+             .button-container {
+                display: flex;
+                justify-content: center;
+                
+            }
+
+            
+    </style>
+</head>
+<body>
+
+    <script src="../navbarAndFooter/AdminNavBar.js"></script>
+    <h1 style="color: aliceblue;"> 
+        CREATE PRODUCT
+    </h1>
+
+    <div class="form-container">
+        <form method="post">
+            <input  type="text" placeholder="price" required name="price">
+            <input type="text" placeholder="foodType" required name="foodType">
+            <input type="text" placeholder="name" required name="name">
+            <input type="text" placeholder="points" required name="points">
+            <input type="text" placeholder="id" required name="id">
+            <br><br><br>
+            <div class="button-container">
+                <button style="font-size: medium;" class="btn btn-outline-light" type="submit"> submit</button> 
+            </div>
+            <br><br>
+
+            <div class="button-container">
+                <button class="btn" style="background-color: rgb(168, 214, 255); height: 40px;"><a style="text-decoration: none;font-size: medium; "href="/menu/">back to menu</a></button>
+                <button class="btn" style="background-color: rgb(168, 214, 255); height: 40px; margin-left: 20px;"><a style="text-decoration: none; font-size: medium;" href="/homePageAdmin/admin">back to home page</a></button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="../homePage/javascripts/main-menu.js"></script>
+</body>
+</html>

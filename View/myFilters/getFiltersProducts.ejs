@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/menu.css" rel="stylesheet">
+    <link href="../styles/styles.css" rel="stylesheet">
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+
+.card-enlarged {
+  transform: scale(1.05);
+}
+
+    </style>
+
+    <script>
+        $(document).ready(function() {
+        $('.card').mouseenter(function() {
+            $(this).addClass('card-enlarged');
+        });
+        $('.card').mouseleave(function() {
+            $(this).removeClass('card-enlarged');
+        });
+        });
+    </script>
+    
+
+    
+<style>
+      
+      body{
+            background-color:ivory;
+        }
+
+    
+    
+    h5{
+        color: rgb(85, 113, 123);
+        font-size: 20px;
+    }
+
+</style>
+    
+</head>
+<body>
+    <script src="../navbarAndFooter/CustomerNavBar.js"></script>
+    <h1>FILTERED PRODUCTS</h1><br>
+    <ul>
+    
+
+            <div class="container" >
+                <div class="card-grid">
+                <% for (p of products) { %>
+                    <div class="card" style="height: 20rem;">
+                        <h5>price: <%= p.price %> </h5>
+                        <h5>foodType: <%= p.foodType %> </h5>
+                        <h5>name: <%= p.name %> </h5>
+                        <h5>points: <%= p.points %> </h5>
+                        <h5>product id: <%= p.id %> </h5><br>
+                        <a class="btn btn-dark" href="/cart/addToCart/<%=p.id%>">add to cart</a> <br><br>
+                        <a style="color: firebrick;" href="/menu/addToFav/<%=p.id%>">Add to Favorite Products</a><br>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+
+
+    </ul>
+</body>
+</html>
+

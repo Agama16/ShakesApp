@@ -1,0 +1,157 @@
+
+
+@font-face {
+    font-family: 'main-font';
+    src: url(../styles/fonts/Quicksand-VariableFont_wght.ttf);
+    font-weight: bold;
+}
+
+.gift-cards
+{
+    height: 70px;
+    background-color: rgb(46, 83, 72);
+    margin-top: -130px;
+}
+
+p{
+    margin-top: 5px;
+}
+
+html, body{
+    font-family: main-font; 
+    line-height: 3.5;
+    color: rgb(39, 39, 39);
+  }
+
+  .gift-sections{
+
+    margin-left: 100px;
+    margin-top: 20px;
+    font-family:'Courier New', Courier, monospace; 
+    font-weight: bolder;
+    font-size: large;
+  }
+
+
+
+
+  
+  * {
+    box-sizing: border-box;
+    margin-right: 0;
+    padding: 0;
+  }
+  
+  .wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+  
+
+  }
+  
+  .container {
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    background-color: transparent;
+
+    margin-left: 60px;
+    
+  }
+
+  .image{
+    width: 400px;
+    border-radius: 1rem;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  label, input, textarea {
+    font-family: main-font;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .order-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgb(177, 202, 199);
+    width: 700px;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .order-box.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+  }
+ 
+
+  .name-of-company {
+    font-family: main-font;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background:rgba(0, 0, 0, 0.7);
+  }
+
+
+  /*the CHANGE for the RIGHT NAVBAR*/
+
+  .navbar-right {
+    position:absolute;
+    right: 0;
+    top: 25px;
+    }
+
+  
+    @media (max-width: 768px) {
+      .order-box {
+        width: 70%;
+      }
+    
+    
+    }
+
+    .Main-menu{
+
+  
+      position: absolute;
+      top: 35px;
+      right: 24px;
+    }
+
+    @media(max-height: 715px) {
+
+      .order-box{
+        overflow-y: auto;
+        height: 450px;
+        overflow-y:scroll;
+      }
+      
+    }

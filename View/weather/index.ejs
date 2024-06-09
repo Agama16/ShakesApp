@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App - JavaScript</title>
+    <link rel="stylesheet" href="./font/Rimouski.css">
+     <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <canvas id="myCanvas" style="border:1px solid #000000;"> </canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        
+        // Create gradient
+        var grd = ctx.createLinearGradient(0, 0, 100, 200);
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "violet");
+        
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 500, 200);
+    </script>
+
+<div class="container" style="top: -600px; position:relative;">
+    <div class="app-title">
+        <p>Weather</p>
+    </div>
+    <div class="notification"> </div>
+    <div class="weather-container">
+        <div class="weather-icon">
+            <img src="./icons/unknown.png" alt="">
+        </div>
+        <div class="temperature-value">
+            <p>- °<span>C</span></p>
+        </div>
+        <div class="temperature-description">
+            <p> - </p>
+        </div>
+        <div class="location">
+            <p>-</p>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="./app.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,92 @@
+.container {
+    max-width: 1200px;
+    margin: 0 ;
+    padding: 0 20px;
+    }
+    
+    .card-grid {
+        display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    grid-gap: 20px;
+    }
+    
+    .navbar{
+    background-color: rgb(226, 218, 252);
+    }
+    .navbar.a:hover{
+        color: rgb(255, 255, 255);
+    }
+    .smaller-menu a:hover{
+        color:rgb(255, 255, 255);
+    }
+    .smaller-menu{
+        background-color: rgb(166, 190, 255);
+    }
+    
+    .card {
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.096);
+    padding: 20px;
+    width: 18rem;
+    height: 19rem;
+    
+    }
+   
+    
+    .btn {
+    margin-top: 10px;
+    }
+    
+    @media (max-width: 768px) {
+    .card-grid {
+    grid-template-columns: 1fr;
+    }
+    
+    .card {
+    padding: 10px;
+    }
+    
+    .btn {
+    margin-top: 20px;
+    }
+    }
+    body 
+    { 
+        background-color:  rgb(166, 190, 255);
+        padding: 1rem; 
+       
+    }
+    form {
+        display: block;
+        margin-bottom: 10px;
+        
+    }
+    
+    .form-container {
+         text-align: center;
+     }
+    
+     input{
+        background-color: rgb(255, 255, 255);
+        color: rgb(87, 87, 88);
+     }
+    
+     .button-container {
+        display: flex;
+        justify-content: center;
+    }
+   
+    
+    h5{
+        color: rgb(255, 255, 255);
+        font-size: medium;
+    }
+    a{
+        font-size: medium;
+        text-decoration: none;
+    }
+    
+    ul{
+        margin-left: 40px;
+    }

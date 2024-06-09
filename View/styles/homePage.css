@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: "main-font";
+    src: url(../styles/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+.order{
+    background-color: transparent !important;
+    margin-top: 40px;
+  }
+
+
+.BuildYourOwn{
+    background-color: transparent !important;
+  }
+
+
+  footer {
+    background-color: transparent !important;
+    color: floralwhite;
+    font-family: main-font;
+  }
+
+  footer h4{
+    color: floralwhite;
+    font-family: main-font;
+
+  }
+
+  footer ul li a {
+    color:floralwhite;
+    font-family: main-font;
+
+  }
+
+  body{
+    font-family: main-font;
+
+  }
+
+  .bg-primary{
+    background-color: transparent !important;
+    color: rgb(48, 48, 48);
+    height: 110px;
+  }
+
+  .order-text{
+     color: floralwhite;
+
+  }
+
+  .build-your-own-text{
+    color: floralwhite;
+  }
+
+  a{
+    color: floralwhite;
+    text-decoration: none;
+    font-size: medium;
+  }
+
+
+.navbar{
+
+    background-color: transparent !important;
+  }

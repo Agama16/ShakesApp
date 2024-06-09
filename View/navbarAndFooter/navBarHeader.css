@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'main-font';
+    src: url(../styles/fonts/Quicksand-VariableFont_wght.ttf);
+    font-weight: bold;
+}
+/* this is the color pallete */
+
+:root {
+  --color-primary: #006241;
+  --color-secondary: rgb(187, 132, 132);
+  --color-extra: #d4e9e2;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-family: main-font;
+  line-height: 1.4;
+  color: rgb(39, 39, 39);
+}
+
+a{
+  color: black;
+}
+
+ul{
+  list-style: none;
+}
+
+p{
+  margin: 5px 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* navbar styles */
+
+.navbar{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%), 
+  0 0 2px rgb(0 0 0 / 7%) ;
+}
+.navbar-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.navbar ul{
+  display: flex;
+  align-items: center;
+}
+
+.navbar li{
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a{
+  color: black;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  color: var(--color-primary);
+}
+
+.navbar-brand img {
+  width: 55px;
+  height: 70px;
+}
+
+.navbar-left{
+  /*push the menu, reward, gift cards to the left*/
+  flex: 1; 
+  margin-left: 10px;
+}
+
+/*this is for the name of the company (at the top center)*/
+.navbar-center{
+   margin-right: 105px ;
+   align-items: center;
+   color:rgb(255, 197, 5);
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size:50px;
+   text-decoration:wavy;
+   outline: 5px dotted orange;
+}
+
+/* the location icon */
+
+.navbar-right li:first-child a{
+  display: flex;
+  align-items: center;
+}
+
+
+/* we want the n-th child from that li but at index 2 to be margin right and left 5px*/
+
+.navbar-right li:nth-child(2){
+  margin: 0 5px;
+}
+
+
+/* Buttons  */
+
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  background: none;
+  border: 1px black solid;
+  border-radius: 50px;
+  padding: 7px 16px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-outline-dark{
+  border-color: black;
+  color: black;
+}
+
+.btn-outline-dark:hover{
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+
+
+.btn-outline-light{
+  border-color: white;
+  color: white;
+}
+
+.btn-dark{
+  background-color: black;
+  color: white;
+}
+
+.btn-dark:hover{
+  background-color: #333;
+}
+
+/* when the screen is smaller */
+
+@media (max-width: 768px) {
+
+  .Main-menu{
+    display: block !important; 
+  }
+  .navbar .navbar-left, .navbar .navbar-right{
+    display: none;
+  }
+}
+
+/* main menu icon */
+
+.Main-menu{
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  background: none;
+  border: none;
+  z-index: 10; /*allways to be on top*/
+  transition: all 0.25s;
+  display: none;
+}
+
+
+.open .three-lines{
+  display: none;
+}
+
+/* smaller menu (for mobile users) */
+
+.smaller-menu{
+  position: fixed;
+  top: 85px;
+  right: 0;
+  background-color: white;
+  width: 90%;
+  height: 100%;
+  color: black;
+  padding: 30px;
+  box-shadow: inset 0 4px 3px -3px rgb(0 0 0 / 10%),
+  inset 0 4px 2px -2px rgb(0 0 0 / 7%);
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.smaller-menu svg{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.smaller-menu ul{
+  line-height: 3;
+  border-bottom:  #777 solid 1px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.smaller-menu a{
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.smaller-menu a:hover{
+  color: var(--color-primary);
+}
+
+.smaller-menu div{
+  margin-top: 20px;
+}
+
+.smaller-menu div a{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.hidden{
+  transform: translateX(100%);
+}

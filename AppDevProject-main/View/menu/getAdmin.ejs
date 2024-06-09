@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../styles/styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>
+        PRODUCT
+    </h1>
+    <ul>
+        <a href="/homePageAdmin/admin">back to home page</a>
+        <% for (p of products) { %>
+
+            <h5>price: <%= p.price %> </h5>
+            <h5>foodType: <%= p.foodType %> </h5>
+            <h5>name: <%= p.name %> </h5>
+            <h5>points: <%= p.points %> </h5>
+            <h5>product id: <%= p.id %> </h5>
+            <br>
+        <% } %>
+    </ul>
+</body>
+</html>

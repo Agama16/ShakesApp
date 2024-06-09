@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../navbarAndFooter/navBarHeader.css" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+
+.card-enlarged {
+  transform: scale(1.05);
+}
+
+    </style>
+
+    <script>
+        $(document).ready(function() {
+        $('.card').mouseenter(function() {
+            $(this).addClass('card-enlarged');
+        });
+        $('.card').mouseleave(function() {
+            $(this).removeClass('card-enlarged');
+        });
+        });
+    </script>
+
+    
+    <style>
+         
+        /*the changes for the navbar----------------*/
+        .navbar{
+        background-color: rgb(80, 91, 122);
+        }
+        .navbar.a:hover{
+            color: aliceblue;
+        }
+        .smaller-menu a:hover{
+            color:aliceblue;
+        }
+        .smaller-menu{
+            background-color: rgb(80, 91, 122);
+        }
+        .navbar a:hover{
+             color: aliceblue;
+        }
+        h5{
+            color: rgb(74, 83, 83);
+        }
+
+
+                /*----------------the fonts and text lable css---------------------*/
+                body 
+        { 
+            background-color: rgb(41, 47, 63);
+            padding: 1rem; 
+        }
+        form {
+            display: block;
+            margin-bottom: 10px;
+            
+        }
+
+        .form-container {
+             text-align: center;
+         }
+
+         input{
+            background-color: rgb(202, 203, 204);
+            color: rgb(87, 87, 88);
+         }
+
+         .button-container {
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        h5{
+            color: rgb(212, 215, 219);
+            font-size: 20px;
+        }
+        a{
+            font-size: medium;
+            text-decoration: none;
+        }
+
+        ul{
+            margin-left: 40px;
+        }
+
+        /*the cards css*/
+
+        .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        }
+
+        .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 20px;
+        }
+
+        .card {
+        margin: 0;
+        border-radius: 5px;
+        box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        }
+
+        .btn {
+        margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+        .card-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .card {
+            padding: 10px;
+        }
+
+        .btn {
+            margin-top: 20px;
+
+        }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <script src="../navbarAndFooter/AdminNavBar.js"></script> <br><br>
+    <h1 style=" text-align: center; color: aliceblue;">
+        PRODUCT
+    </h1><br>
+
+    <ul>
+        <div style="text-align: center; margin-right: 35px;"> 
+            <a  class="btn btn-outline-light" href="/homePageAdmin/admin">back to home page</a>
+        </div> <br>
+        <div class="container">
+            <div class="card-grid" >
+                <% for (p of products) { %>
+                <div class="card" >
+                    <h5>price: <%= p.price %> </h5>
+                    <h5>foodType: <%= p.foodType %> </h5>
+                    <h5>name: <%= p.name %> </h5>
+                    <h5>points: <%= p.points %> </h5>
+                    <h5>product id: <%= p.id %> </h5>
+                </div> 
+                <% } %>
+            </div>
+        </div>
+
+           
+<br>
+    </ul>   
+
+</body>
+</html>

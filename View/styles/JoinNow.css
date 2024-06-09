@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "main-font";
+  src: url(../styles/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+body{
+ font-family: main-font; 
+}
+
+  
+.container{
+margin-top: 40px;
+font-family: main-font;
+font-size: small;
+text-align: center;
+
+}
+.container button{
+  font-size: larger;
+  border-radius: 40px;
+  font-family: main-font;
+  background-color: white;
+  cursor: pointer;;
+  
+}
+
+
+/*fixes for the nav bar smaller menu*/
+
+.smaller-menu div a{
+  font-weight: 600;
+}
+
+.smaller-menu ul{
+  font-weight: 600;
+}
+
+body
+{
+  background-image: linear-gradient(to bottom right,rgb(185, 234, 250),rgb(253, 225, 255));
+  background-size: cover;
+}
+
+
+/*join now in box */
+
+
+.join-now .user-box{
+  position: relative;
+
+}
+
+.join-now .user-box input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #686666;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid#252729;
+  background-color: transparent;
+}
+
+.join-now .user-box label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #494747;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.join-now .user-box input:focus ~ label,
+.join-now .user-box input:valid ~ label{
+  top: -33px;
+  left: 0;
+  color: #ff9de3;
+  font-size: 12px;
+}
+
+
+.join-now{
+  position:absolute;
+  top: 520px;
+  left: 50%;
+  width: 320px;
+  padding: 0px;
+  transform: translate(-50%, -50%);
+}
+
+/*when there is auto fill we want the background text to be as it was then (transprent background color)*/
+
+input:-webkit-autofill { 
+  -webkit-background-clip: text;
+}
